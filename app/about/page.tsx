@@ -41,7 +41,7 @@ export default function AboutPage() {
             <div className="prose prose-lg max-w-none">
               <p className="text-xl leading-relaxed text-dark-blue mb-8">
                 Founded in 2018, our Student Center has grown from a small group of passionate individuals into a
-                thriving community that serves as the heart of student life on campus. We believe that education extends
+                BOCA JUNIORSD MIAMI. We believe that education extends
                 far beyond the classroom, and our mission is to create meaningful opportunities for personal growth,
                 professional development, and community engagement.
               </p>
