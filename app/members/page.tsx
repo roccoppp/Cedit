@@ -99,13 +99,6 @@ export default function MembersPage() {
           ))}
         </div>
       </div>
-
-      {/* Footer */}
-      <footer className="bg-dark-blue text-white py-8 px-4 mt-16">
-        <div className="container mx-auto text-center">
-          <p className="text-lg">© 2024 Student Center. Building community, one connection at a time.</p>
-        </div>
-      </footer>
     </div>
   )
 }
