@@ -1,6 +1,7 @@
 "use server"
 
 import { redirect } from "next/navigation"
+import { prisma } from "@/lib/prisma"
 
 export async function submitContactForm(formData: FormData) {
   const firstName = formData.get("firstName") as string
@@ -11,24 +12,29 @@ export async function submitContactForm(formData: FormData) {
   const interest = formData.get("interest") as string
   const message = formData.get("message") as string
 
-  // In a real application, you would send this data via email
-  // For now, we'll just log it and redirect with a success message
-  console.log("Contact form submission:", {
-    firstName,
-    lastName,
-    email,
-    phone,
-    studentId,
-    interest,
-    message,
-    submittedAt: new Date().toISOString(),
-  })
+  try {
+    // Save to database
+    await prisma.contact.create({
+      data: {
+        name: `${firstName} ${lastName}`,
+        email,
+        message: `
+          Phone: ${phone}
+          Student ID: ${studentId}
+          Interest: ${interest}
+          Message: ${message}
+        `.trim()
+      }
+    })
 
-  // Here you would typically:
-  // 1. Send an email to the organization
-  // 2. Save to a database
-  // 3. Send a confirmation email to the user
+    // Log for debugging
+    console.log("Contact form submission saved to database")
 
-  // Redirect to a success page or back to contact with success message
+
+
+  } catch (error) {
+    console.error("Error saving contact form:", error)
+    redirect("/contact?error=true")
+  }
   redirect("/contact?success=true")
 }

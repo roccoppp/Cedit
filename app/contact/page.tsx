@@ -10,26 +10,6 @@ import { submitContactForm } from "./actions"
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-light-purple">
-      {/* Navigation */}
-      <nav className="bg-dark-blue text-white p-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold">Student Center</h1>
-          <div className="flex space-x-6">
-            <Link href="/" className="hover:text-bright-blue transition-colors">
-              Home
-            </Link>
-            <Link href="/members" className="hover:text-bright-blue transition-colors">
-              Members
-            </Link>
-            <Link href="/about" className="hover:text-bright-blue transition-colors">
-              About
-            </Link>
-            <Link href="/contact" className="text-bright-blue">
-              Contact
-            </Link>
-          </div>
-        </div>
-      </nav>
 
       <div className="container mx-auto py-12 px-4">
         <Link

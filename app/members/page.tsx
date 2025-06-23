@@ -6,9 +6,9 @@ import { ArrowLeft } from "lucide-react"
 export default function MembersPage() {
   const members = [
     {
-      name: "Sarah Johnson",
+      name: "Alex Delanghe",
       role: "President",
-      photo: "/placeholder.svg?height=300&width=300",
+      photo: "/alex.png", 
       description: "Computer Science major passionate about community building",
     },
     {
@@ -45,27 +45,7 @@ export default function MembersPage() {
 
   return (
     <div className="min-h-screen bg-light-purple">
-      {/* Navigation */}
-      <nav className="bg-dark-blue text-white p-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold">Student Center</h1>
-          <div className="flex space-x-6">
-            <Link href="/" className="hover:text-bright-blue transition-colors">
-              Home
-            </Link>
-            <Link href="/members" className="text-bright-blue">
-              Members
-            </Link>
-            <Link href="/about" className="hover:text-bright-blue transition-colors">
-              About
-            </Link>
-            <Link href="/contact" className="hover:text-bright-blue transition-colors">
-              Contact
-            </Link>
-          </div>
-        </div>
-      </nav>
-
+      
       <div className="container mx-auto py-12 px-4">
         <Link
           href="/"
