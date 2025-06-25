@@ -23,7 +23,7 @@ export default function ContactPage() {
         <h2 className="text-5xl font-bold text-dark-blue text-center mb-4">Get In Touch</h2>
         <p className="text-xl text-dark-blue/80 text-center mb-12 max-w-3xl mx-auto">
           Ready to join our community or have questions about our programs? We'd love to hear from you! Fill out the
-          form below and we'll get back to you soon.
+          form below and we'll get back to you sooner or later.
         </p>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
